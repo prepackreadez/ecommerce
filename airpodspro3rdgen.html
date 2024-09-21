@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - JS6 Classic Smart Watch</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            overflow-y: auto; /* Allow vertical scrolling */
+            position: relative; /* Ensure body is positioned for absolute children */
+        }
+
+        /* Video background styling */
+        .video-background {
+            position: fixed; /* Fixes the video in place */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the video covers the entire area */
+            z-index: -1; /* Places video behind other content */
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333333;
+            padding: 10px 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin-right: 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        header nav ul li a:hover,
+        header nav ul li a:focus {
+            background-color: #555555;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            color: #ffffff;
+        }
+
+        header nav ul li a.active {
+            border-bottom: 2px solid #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(66, 66, 66, 0.9); /* Slightly transparent background for the container */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px #290202;
+            position: relative; /* Ensure container is above the background */
+            z-index: 1;
+        }
+
+        .product-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-images {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .product-images img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .product-info {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .product-info h1 {
+            margin-top: 0;
+        }
+
+        .product-info p {
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #d43939;
+        }
+
+        .specifications {
+            margin: 20px 0;
+        }
+
+        .specifications h2 {
+            margin-top: 0;
+        }
+
+        .specifications ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .specifications ul li {
+            padding: 5px 0;
+        }
+
+        .call-to-action {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+
+        .call-to-action button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+
+        .call-to-action .buy-now {
+            background: linear-gradient(135deg, #08d801, #353535); /* Gradient background */
+            color: #ffffff;
+            padding: 12px 25px; /* Increased padding */
+            font-size: 15px; /* Larger text size */
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Initial shadow */
+        }
+
+        .call-to-action .buy-now:hover {
+            background: linear-gradient(135deg, #08d801, #9c9c9c); /* Reversed gradient on hover */
+            transform: scale(0.9); /* Slightly larger when hovered */
+            box-shadow: 0 0 20px rgb(41, 41, 41), 0 0 30px rgba(0, 0, 0, 0.5); /* Glow effect */
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Suggested Products Section */
+        .suggested-products {
+            margin-top: 40px;
+            text-align: center; /* Center-align text and child elements */
+        }
+
+        .suggested-products h2 {
+            margin-bottom: 20px;
+        }
+
+        .suggested-products .product-list {
+            display: flex;
+            justify-content: center; /* Center-align the product items horizontally */
+            gap: 20px; /* Space between products */
+        }
+
+        .suggested-products .product-item {
+            position: relative;
+            width: 300px; /* Fixed width for square shape */
+            height: 300px; /* Fixed height for square shape */
+            background: rgba(66, 66, 66, 0.9);
+            border-radius: 8px;
+            border: 2px solid transparent; /* Invisible border by default */
+            box-shadow: 0 4px 10px #290202;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Smooth transitions for glow effect and border color */
+            cursor: pointer;
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .suggested-products .product-item img {
+            width: 100%;
+            height: 100%; /* Ensure the image covers the full height */
+            object-fit: cover; /* Cover the entire area */
+            border-bottom: none; /* Remove the border */
+        }
+
+        .suggested-products .product-item .product-info {
+            padding: 10px;
+        }
+
+        .suggested-products .product-item .product-info h3 {
+            margin-top: 0;
+            font-size: 1.2rem; /* Larger font size for product name */
+        }
+
+        .suggested-products .product-item .product-info .price {
+            color: #ffffff; /* Price color in white */
+        }
+
+        /* Hidden overlay styling */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.788); /* Grey background with opacity */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 1;
+            text-align: center;
+            padding: 10px; /* Add padding for better spacing */
+        }
+
+        .product-item:hover .overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Larger font size for product name */
+        .overlay h3 {
+            font-size: 1.5rem; /* Larger font size for product name */
+            margin: 0;
+        }
+
+        .overlay p {
+            margin: 10px 0;
+        }
+
+        /* White glowing border effect on hover */
+        .suggested-products .product-item:hover {
+            border-color: #fff; /* White border color on hover */
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8); /* White glowing border effect */
+            transform: translateY(-10px); /* Moves the item 10px up on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video background -->
+    <video class="video-background" autoplay loop muted>
+        <source src="assets/videoplayback.webm" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="product-details">
+            <div class="product-images">
+                <img src="assets/airpodspro3rdgen.jpg" alt="Airpods Pro2">
+            </div>
+            <div class="product-info">
+                <h1>Airpods Pro2</h1>
+                <p class="price">Rs. 3500.00</p>
+                <p>The AirPods Pro 3rd Gen deliver an unparalleled listening experience with active noise cancellation, a customizable fit, and immersive sound quality, perfect for all-day comfort and high-performance audio.</p>
+                
+                <div class="specifications">
+                    <h2>Specifications</h2>
+                    <ul>
+                        <li><strong>Noise Cancellation:</strong> Yes</li>
+                        <li><strong>Waterproof:</strong> NO</li>
+                        <li><strong>Battery Life:</strong> Up to 3 days</li>
+                        <li><strong>Colour:</strong> White</li>
+                        <li><strong>Compatibility:</strong> iOS and Android</li>
+                        <li><strong>Material:</strong> Plastic</li>
+                    </ul>
+                </div>
+                <div class="call-to-action">
+                    <a target="_blank" class="buy-now" onclick="window.location.href='https://wa.me/+923249451728?text=I%27m%20interested%20in%20the%20AirPods%20Pro%203rd%20Gen%20send%20me%20more%20details...'">WhatsApp</a>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Suggested Products Section -->
+        <div class="suggested-products">
+            <h2>You Might Also Like</h2>
+            <div class="product-list">
+                <a href="airpodsi12.html" class="product-item">
+                    <img src="assets/Airpods i12.jpg" alt="Airpods i12">
+                    <div class="overlay">
+                        <h3>Airpods i12</h3>
+                        <p>Best Sound with Best Battery Life. Also Affordable Price</p>
+                        <p class="price">Rs. 1500.00</p>
+                    </div>
+                </a>
+                <a href="airpodsm10.html" class="product-item">
+                    <img src="assets/airpodsm10.jpg" alt="Airpods M10">
+                    <div class="overlay">
+                        <h3>Airpods M10</h3>
+                        <p>High Fidelity Audio, Lightweight Design</p>
+                        <p class="price">Rs. 1500.00</p>
+                    </div>
+                </a>
+                <a href="airpodspro2.html" class="product-item">
+                    <img src="assets/Airpods pro2.jpg" alt="Airpods Pro2">
+                    <div class="overlay">
+                        <h3>Airpods Pro2</h3>
+                        <p>Enhanced Noise Cancellation, Improved Battery Life</p>
+                        <p class="price">Rs. 3000.00</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Prepack Traders. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

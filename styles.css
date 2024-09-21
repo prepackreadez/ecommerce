@@ -1,0 +1,288 @@
+/* Global styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: radial-gradient(circle, rgba(247, 246, 246, 0.8) 30%, rgba(0,0,0,0.5) 100%);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* Header styling */
+header {
+    background-color: #333333; /* Dark grey background for header */
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White text color */
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #555555; /* Slightly lighter grey */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    color: #ffffff; /* White text color on hover */
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #ffffff; /* Highlight active link */
+}
+
+/* Hero section styling */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0) 0%, rgb(65, 64, 63) 100%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero .banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
+}
+
+.hero .banner-img video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 700;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 10px 0 30px;
+    font-weight: 300;
+    animation: fadeIn 3s ease-out;
+}
+
+.hero-content button {
+    padding: 10px 20px; /* Updated padding */
+    font-size: 16px; /* Updated font size */
+    background-color: #696666; /* Updated background color */
+    color: #ffffff; /* Updated text color */
+    border: none;
+    border-radius: 5px; /* Updated border-radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Updated transition */
+    animation: fadeIn 4s ease-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Default glow effect */
+}
+
+.hero-content button:hover {
+    background-color: #290202; /* Updated hover background color */
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Glowing effect on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Featured Products section styling */
+.featured-products {
+    position: relative;
+    padding: 40px 20px;
+    color: #ffffff;
+    overflow: hidden; /* Ensures the video does not spill outside */
+}
+
+.featured-products .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Ensures the video is behind the content */
+}
+
+.featured-products .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire container */
+    filter: brightness(0.5); /* Optional: darken the video for better text readability */
+}
+
+.featured-products .content {
+    position: relative;
+    z-index: 1; /* Ensures content is above the video */
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: additional background color for better readability */
+}
+
+.featured-products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product {
+    background: #474747;
+    border: 2px solid transparent; /* Default border */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgb(247, 247, 247); /* Neon glow effect */
+    border: 2px solid rgba(255, 255, 255, 0.678); /* Neon border color */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.product p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* Call to Action section styling */
+/* Call to Action section styling */
+.call-to-action {
+    text-align: center;
+    padding: 60px 20px;
+    position: relative; /* Allow positioning of video background */
+    color: white;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    overflow: hidden; /* Ensure video does not overflow */
+}
+
+.call-to-action .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place behind the content */
+}
+
+.call-to-action .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.call-to-action h2 {
+    margin: 0 0 15px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.call-to-action p {
+    margin: 0 0 25px;
+    font-size: 1.2rem;
+}
+
+.call-to-action button {
+    padding: 10px 20px; /* Updated padding */
+    font-size: 16px; /* Updated font size */
+    background-color: #696666; /* Updated background color */
+    color: #ffffff; /* Updated text color */
+    border: none;
+    border-radius: 5px; /* Updated border-radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Updated transition */
+    animation: fadeIn 4s ease-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Default glow effect */
+}
+
+.call-to-action button:hover {
+    background-color: #290202; /* Updated hover background color */
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Glowing effect on hover */
+}
+
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #000;
+    color: #ffffff;
+}

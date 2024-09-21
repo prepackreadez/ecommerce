@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepack Tradez</title>
+    <style>
+        /* Global styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%; /* Ensure width is set to 100% */
+            box-sizing: border-box;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: radial-gradient(circle, rgb(105 102 102) 30%, rgb(129 123 123 / 74%) 100%);
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333333;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #555555;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            color: #ffffff;
+        }
+
+        nav ul li a.active {
+            border-bottom: 2px solid #ffffff;
+        }
+
+        /* Hero section styling */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 90vh;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(120deg, rgba(0, 0, 0, 0) 0%, rgb(65, 64, 63) 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero .banner-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero .banner-img video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin: 0;
+            font-weight: 700;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin: 10px 0 30px;
+            font-weight: 300;
+            animation: fadeIn 3s ease-out;
+        }
+
+        .hero-content button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #696666;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 4s ease-out;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+        }
+
+        .hero-content button:hover {
+            background-color: #290202;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Featured Products section styling */
+        .featured-products {
+            padding: 40px 20px;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .featured-products .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .featured-products .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .featured-products h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .product {
+            position: relative;
+            overflow: hidden;
+            background: #fff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.377);
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgb(255, 255, 255);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.3s;
+        }
+
+        .product h3 {
+            margin: 15px 0 10px;
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+
+        .product p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #fdfdfd;
+        }
+
+        /* Overlay styling */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.747);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .product:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Call to Action section styling */
+        .call-to-action {
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            color: white;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .call-to-action .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .call-to-action .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .call-to-action h2 {
+            margin: 0 0 15px;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .call-to-action p {
+            margin: 0 0 25px;
+            font-size: 1.2rem;
+        }
+
+        .call-to-action button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #696666;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 4s ease-out;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+        }
+
+        .call-to-action button:hover {
+            background-color: #290202;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #000;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="shop.html" id="shop-link">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="game.html">Gamming Area 🎮</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="banner-img">
+                <video autoplay muted loop>
+                    <source src="assets/videoplayback.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="hero-content">
+                <h1>Explore the Future of Tech</h1>
+                <p>Innovative products that transform your lifestyle.</p>
+                <button id="hero-content-button">Products</button>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="featured-products">
+            <div class="video-background">
+                <video autoplay muted loop>
+                    <source src="assets/videoplayback.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="content">
+                <h2>Featured Products</h2>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="./assets/airpodspro.jpg" alt="JS6 Classic Smart Watch">
+                        <a href="/airpodspro.html" class="overlay"> 
+                            <h3>Airpods Pro</h3>
+                            <p>Rs.3000.00</p>
+                            <p>With ANC</p>
+                            <p>Long Battery Life</p>
+                        </a>
+                    </div>
+
+
+                    <div class="product">
+                        <img src="./assets/smartwatch.jpg" alt="JS6 Classic Smart Watch">
+                        <a href="/js6watch.html" class="overlay"> 
+                            <h3>JS6 Classic Smart Watch</h3>
+                            <p>Rs.7000.00</p>
+                            <p>Heart Rate Monitoring</p>
+                            <p>GPS Tracking</p>
+                            <p>Long Battery Life</p>
+                        </a>
+                    </div>
+
+
+                    <div class="product">
+                        <img src="./assets/watchstraps.jpg" alt="Chain Straps">
+                        <a href="/chainstraps.html" class="overlay"> 
+                            <h3>Chain Straps</h3>
+                            <p>Rs.1500.00</p>
+                            <p>Stainless Steel</p>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="call-to-action">
+            <div class="video-background">
+                <video autoplay muted loop>
+                    <source src="assets/videoplayback.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h2>Get 25% off on these Products</h2>
+            <p>All tech products are available on our platform.</p>
+            <button>Click & Explore</button>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Prepack Traders. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script defer>
+        // JavaScript to navigate to the new page when the "Shop" link is clicked
+        document.getElementById('shop-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            window.location.href = 'shop.html'; // Replace with the actual URL of your shop page
+        });
+
+        // JavaScript to navigate to the new page when the "Products" button is clicked
+        document.getElementById('hero-content-button').addEventListener('click', function(event) {
+            window.location.href = 'shop.html'; // Replace with the actual URL of your shop page
+        });
+
+        // JavaScript to navigate to the new page when the "Flash Sale" button is clicked
+        document.querySelector('.call-to-action button').addEventListener('click', function() {
+            window.location.href = 'shop.html'; // Replace with the actual URL of your flash sale page
+        });
+    </script>
+</body>
+</html>
