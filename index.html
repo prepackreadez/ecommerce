@@ -33,12 +33,23 @@
         header {
             background-color: #333333;
             padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row-reverse;
         }
+
+        .website-name {
+            font-size: 18px;
+            color: #b8b2b2;
+            font-weight: bold;
+        }
+
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             margin: 0;
             padding: 0;
         }
@@ -107,14 +118,16 @@
             font-size: 4rem;
             margin: 0;
             font-weight: 700;
-            animation: fadeIn 2s ease-out;
+            animation: fadeIn 7s ease-out;
+            margin-right: 2rem;
         }
 
         .hero-content p {
             font-size: 1.5rem;
             margin: 10px 0 30px;
             font-weight: 300;
-            animation: fadeIn 3s ease-out;
+            animation: fadeIn 7s ease-out;
+            margin-right: 1.8rem;
         }
 
         .hero-content button {
@@ -126,8 +139,9 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeIn 4s ease-out;
+            animation: fadeIn 7s ease-out;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            margin-right: 2rem;
         }
 
         .hero-content button:hover {
@@ -295,7 +309,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeIn 4s ease-out;
+            animation: fadeIn 10s ease-out;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
         }
 
@@ -318,14 +332,15 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" class="aActive">Home</a></li>
                 <li><a href="shop.html" id="shop-link">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="game.html">Gamming Area 🎮</a></li>
             </ul>
         </nav>
+        <div class="website-name"><strong>Prepack Tradez</strong></div>
     </header>
+    
 
     <main>
         <!-- Hero Section -->
