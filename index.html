@@ -396,34 +396,24 @@
     <main>
         <section class="hero">
             <div class="banner-img">
-                <video autoplay muted loop>
-                    <source src="assets/videoplayback.webm" type="video/mp4">
-                </video>
+                <img src="./assets/backgroundimg.jpg" alt="Banner">
             </div>
             <div class="hero-content">
                 <h1>Prepack Tradez</h1>
                 <p>Explore the best deals on tech products</p>
-                <button id="hero-content-button">Products</button>
-
+                <button id="hero-content-button">Shop Here</button>
                 <script>
                     document.getElementById("hero-content-button").addEventListener("click", function() {
                         window.location.href = "shop.html";
                     });
                 </script>
-                
             </div>
         </section>
 
         <!-- Featured Products Section -->
-        <section class="featured-products">
-            <div class="video-background">
-                <video autoplay muted loop>
-                    <source src="assets/videoplayback.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+        <section class="featured-products" style="background-color: black;">
             <div class="content">
-                <h2>Featured Products</h2>
+                <h2 style="color: white;">Featured Products</h2>
                 <div class="product-grid">
                     <div class="product">
                         <img src="./assets/ultrawatch2000.jpg" alt="Smart Watch T2000">
@@ -433,8 +423,8 @@
                             <p>2 Days Battery Time</p>
                             <p>Wireless Charging</p>
                         </a>
-                    </div>
 
+                    </div>
 
                     <div class="product">
                         <img src="./assets/toyotarimswatchshoppage.jpg" alt="Toyota Rims Watch">
@@ -447,7 +437,6 @@
                         </a>
                     </div>
 
-
                     <div class="product">
                         <img src="./assets/watchstraps.jpg" alt="Chain Straps">
                         <a href="/chainstraps.html" class="overlay"> 
@@ -456,10 +445,10 @@
                             <p>Stainless Steel</p>
                         </a>
                     </div>
-                    </div>
                 </div>
             </div>
         </section>
+
 
         <!-- New Customer Reviews section -->
         <section class="customer-reviews">
@@ -490,30 +479,25 @@
                 <p>Stay tuned for incredible discounts on your favorite tech products.</p>
             </div>
         </section>
-
-        <!-- New Call to Action section -->
+        <!-- Call to Action Section -->
         <section class="call-to-action">
             <div class="video-background">
                 <video autoplay muted loop>
-                    <source src="assets/videoplayback.webm" type="video/mp4">
+                    <source src="assets/videoplayback.webm" type="video/webm">
+                    Your browser does not support the video tag.
                 </video>
             </div>
-            <h2>Don't Miss Out on Our Special Deals!</h2>
-            <p>All Deals Are Available With Affordale Prices.</p>
-            <button id="hero-content-button">Products</button>
-
-            <script>
-                document.getElementById("hero-content-button").addEventListener("click", function() {
-                    window.location.href = "Deals.html";
-                });
-            </script>
-            
+            <h2>Get 25% off on these Products</h2>
+            <p>All tech products are available on our platform.</p>
+            <button onclick="location.href='shop.html';">Click & Explore</button>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Prepack Tradez. All rights reserved.</p>
+        <p>&copy; 2024 Prepack Traders. All rights reserved.</p>
     </footer>
+
     <!-- JavaScript -->
     <script defer>
         // JavaScript to navigate to the new page when the "Shop" link is clicked
