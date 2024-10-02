@@ -51,9 +51,7 @@ nav ul li a:focus {
     color: #ffffff; /* White text color on hover */
 }
 
-nav ul li a.active {
-    border-bottom: 2px solid #ffffff; /* Highlight active link */
-}
+
 
 /* Hero section styling */
 .hero {

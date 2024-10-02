@@ -10,9 +10,9 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            width: 100%; /* Ensure width is set to 100% */
+            width: 100%; 
             box-sizing: border-box;
-            overflow-x: hidden; /* Prevent horizontal scrollbar */
+            overflow-x: hidden; 
         }
 
         body {
@@ -310,38 +310,107 @@
 
         /* Footer styling */
         footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #000;
+            background-color: #000000;
             color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        /* Added section styles */
+        .customer-reviews {
+            padding: 40px;
+            background-color: #000000;
+            text-align: center;
+            color: #fafafa;
+        }
+
+        .customer-reviews h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .review {
+            margin-bottom: 20px;
+        }
+
+        .review p {
+            font-style: italic;
+            margin: 0 0 10px;
+        }
+
+        .latest-news {
+            padding: 40px;
+            background-color: #000000;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .latest-news h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+        }
+
+        .news-item h3 {
+            margin-bottom: 10px;
+        }
+
+        .news-item p {
+            margin: 0;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
-                <li><a href="#" class="aActive">Home</a></li>
-                <li><a href="shop.html" id="shop-link">Shop</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="deals.html">Deals</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero">
             <div class="banner-img">
                 <video autoplay muted loop>
-                    <source src="assets/videoplayback.webm" type="video/webm">
-                    Your browser does not support the video tag.
+                    <source src="assets/videoplayback.webm" type="video/mp4">
                 </video>
             </div>
             <div class="hero-content">
-                <h1>Explore the Future of Tech</h1>
-                <p>Innovative products that transform your lifestyle.</p>
+                <h1>Prepack Tradez</h1>
+                <p>Explore the best deals on tech products</p>
                 <button id="hero-content-button">Products</button>
+
+                <script>
+                    document.getElementById("hero-content-button").addEventListener("click", function() {
+                        window.location.href = "shop.html";
+                    });
+                </script>
+                
             </div>
         </section>
 
@@ -357,24 +426,24 @@
                 <h2>Featured Products</h2>
                 <div class="product-grid">
                     <div class="product">
-                        <img src="./assets/airpodspro.jpg" alt="JS6 Classic Smart Watch">
-                        <a href="/airpodspro.html" class="overlay"> 
-                            <h3>Airpods Pro</h3>
-                            <p>Rs.3000.00</p>
-                            <p>With ANC</p>
-                            <p>Long Battery Life</p>
+                        <img src="./assets/ultrawatch2000.jpg" alt="Smart Watch T2000">
+                        <a href="/ultra2000.html" class="overlay"> 
+                            <h3>T2000 Ultra Watch</h3>
+                            <p>Rs.2000.00</p>
+                            <p>2 Days Battery Time</p>
+                            <p>Wireless Charging</p>
                         </a>
                     </div>
 
 
                     <div class="product">
-                        <img src="./assets/smartwatch.jpg" alt="JS6 Classic Smart Watch">
-                        <a href="/js6watch.html" class="overlay"> 
-                            <h3>JS6 Classic Smart Watch</h3>
-                            <p>Rs.7000.00</p>
-                            <p>Heart Rate Monitoring</p>
-                            <p>GPS Tracking</p>
-                            <p>Long Battery Life</p>
+                        <img src="./assets/toyotarimswatchshoppage.jpg" alt="Toyota Rims Watch">
+                        <a href="/toyotawatch.html" class="overlay"> 
+                            <h3>Toyota Rims Watch</h3>
+                            <p>Rs.4000.00</p>
+                            <p>Mat Black</p>
+                            <p>Heavy Chain</p>
+                            <p>With Box</p>
                         </a>
                     </div>
 
@@ -392,25 +461,59 @@
             </div>
         </section>
 
-        <!-- Call to Action Section -->
+        <!-- New Customer Reviews section -->
+        <section class="customer-reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <p>"Good Quality With Affordale Prices I like My order, Jo Mangwaya tha wohi aya hai!"</p>
+                <p>- Zain Ali.</p>
+            </div>
+            <div class="review">
+                <p>"I love my new smartwatch, highly recommend this store."</p>
+                <p>- Sarah Kamran.</p>
+            </div>
+            <div class="review">
+                <p>"I ordered Airpods Pro2 From this Store its ANC is better than other airpods"</p>
+                <p>- Moiz Asad.</p>
+            </div>
+        </section>
+
+        <!-- New Latest News section -->
+        <section class="latest-news">
+            <h2>Latest News</h2>
+            <div class="news-item">
+                <h3>New Product Launch: iPhone 16 Pro Max</h3>
+                <p>The iPhone 16 Pro Max has been launched with exciting new features.</p>
+            </div>
+            <div class="news-item">
+                <h3>Upcoming Friday Deals</h3>
+                <p>Stay tuned for incredible discounts on your favorite tech products.</p>
+            </div>
+        </section>
+
+        <!-- New Call to Action section -->
         <section class="call-to-action">
             <div class="video-background">
                 <video autoplay muted loop>
-                    <source src="assets/videoplayback.webm" type="video/webm">
-                    Your browser does not support the video tag.
+                    <source src="assets/videoplayback.webm" type="video/mp4">
                 </video>
             </div>
-            <h2>Get 25% off on these Products</h2>
-            <p>All tech products are available on our platform.</p>
-            <button>Click & Explore</button>
+            <h2>Don't Miss Out on Our Special Deals!</h2>
+            <p>All Deals Are Available With Affordale Prices.</p>
+            <button id="hero-content-button">Products</button>
+
+            <script>
+                document.getElementById("hero-content-button").addEventListener("click", function() {
+                    window.location.href = "Deals.html";
+                });
+            </script>
+            
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Prepack Traders. All rights reserved.</p>
+        <p>&copy; 2024 Prepack Tradez. All rights reserved.</p>
     </footer>
-
     <!-- JavaScript -->
     <script defer>
         // JavaScript to navigate to the new page when the "Shop" link is clicked
