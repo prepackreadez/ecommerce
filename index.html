@@ -317,51 +317,132 @@
             margin-top: auto;
         }
 
-        /* Added section styles */
+        /* Updated Customer Reviews styles */
         .customer-reviews {
-            padding: 40px;
+            padding: 50px;
             background-color: #000000;
             text-align: center;
-            color: #fafafa;
+            color: #fff;
         }
 
-        .customer-reviews h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+        .reviews-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .review {
-            margin-bottom: 20px;
+        .review-card {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            text-align: left;
         }
 
-        .review p {
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .review-info h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .review-stars {
+            color: gold;
+            font-size: 1rem;
+        }
+
+        .review-text {
             font-style: italic;
-            margin: 0 0 10px;
+            color: #ddd;
         }
 
-        .latest-news {
+
+                .latest-news {
             padding: 40px;
-            background-color: #000000;
+            background-color: #111111;
             text-align: center;
             color: #ffffff;
         }
 
         .latest-news h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .news-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
         .news-item {
-            margin-bottom: 20px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 500px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
         }
 
-        .news-item h3 {
-            margin-bottom: 10px;
+        .news-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
         }
 
-        .news-item p {
-            margin: 0;
+        .news-img {
+            width: 100%;
+            height: auto;
         }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-content h3 {
+            font-size: 1.8rem;
+            color: #ff4500;
+        }
+
+        .news-content p {
+            margin: 10px 0 20px;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+
+        .news-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #696666;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-button:hover {
+            background-color: #290202;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
 
         /* Responsive styling */
         @media (max-width: 768px) {
@@ -451,34 +532,71 @@
 
 
         <!-- New Customer Reviews section -->
-        <section class="customer-reviews">
-            <h2>Customer Reviews</h2>
-            <div class="review">
-                <p>"Good Quality With Affordale Prices I like My order, Jo Mangwaya tha wohi aya hai!"</p>
-                <p>- Zain Ali.</p>
+<!-- Updated Customer Reviews section -->
+<section class="customer-reviews">
+    <h2>Customer Reviews</h2>
+    <div class="reviews-container">
+        <div class="review-card">
+            <div class="review-header">
+                <img src="./assets/user1.jpg" alt="Zain Ali" class="review-avatar">
+                <div class="review-info">
+                    <h3>Anas</h3>
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+                </div>
             </div>
-            <div class="review">
-                <p>"I love my new smartwatch, highly recommend this store."</p>
-                <p>- Sarah Kamran.</p>
+            <p class="review-text">"Smart Watch 2000 ultra mangwai thi best price hai quality k hisab se."</p>
+        </div>
+        <div class="review-card">
+            <div class="review-header">
+                <img src="./assets/user2.jpg" alt="Sarah Kamran" class="review-avatar">
+                <div class="review-info">
+                    <h3>Hareem Mughal</h3>
+                    <div class="review-stars">
+                        ★★★★☆
+                    </div>
+                </div>
             </div>
-            <div class="review">
-                <p>"I ordered Airpods Pro2 From this Store its ANC is better than other airpods"</p>
-                <p>- Moiz Asad.</p>
+            <p class="review-text">"I ordered Airpods pro boht fast shiping hai or product ki quality bhi boht zabardast hai."</p>
+        </div>
+        <div class="review-card">
+            <div class="review-header">
+                <img src="./assets/user3.jpg" alt="Moiz Asad" class="review-avatar">
+                <div class="review-info">
+                    <h3>Moiz Asad</h3>
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+                </div>
             </div>
-        </section>
+            <p class="review-text">"I ordered Headset Pro from this store. Best sound Quality is price ma ye chez mushkil hai."</p>
+        </div>
+    </div>
+</section>
+
 
         <!-- New Latest News section -->
         <section class="latest-news">
             <h2>Latest News</h2>
-            <div class="news-item">
-                <h3>New Product Launch: iPhone 16 Pro Max</h3>
-                <p>The iPhone 16 Pro Max has been launched with exciting new features.</p>
-            </div>
-            <div class="news-item">
-                <h3>Upcoming Friday Deals</h3>
-                <p>Stay tuned for incredible discounts on your favorite tech products.</p>
+            <div class="news-container">
+                <div class="news-item">
+                    <div class="news-content">
+                        <h3>New Product Launch: iPhone 16 Pro Max</h3>
+                        <p>The iPhone 16 Pro Max has been launched with cutting-edge features, including a more powerful chip, longer battery life, and enhanced AI capabilities.</p>
+                        <button class="news-button" onclick="window.location.href='latestnews.html';">Learn More</button>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-content">
+                        <h3>Upcoming Friday Deals</h3>
+                        <p>Get ready for the most exciting deals on the latest tech products, including discounts on Smart Watches, AirPods, and more. Don't miss out!</p>
+                        <button class="news-button" onclick="window.location.href='deals.html';">Explore Deals</button>
+                    </div>
+                </div>
             </div>
         </section>
+        
         <!-- Call to Action Section -->
         <section class="call-to-action">
             <div class="video-background">

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 16 Pro Max - Product Details</title>
+    <style>
+        /* Global Styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%; 
+            box-sizing: border-box;
+            overflow-x: hidden; 
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000000;
+            background: radial-gradient(circle, #eeba76
+            , rgb(248, 228, 200)
+            );
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333333;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #555555;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            color: #ffffff;
+        }
+
+        nav ul li a.active {
+            border-bottom: 2px solid #ffffff;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        .product-details {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* Square image style */
+        .product-details img {
+            max-width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(184, 113, 113, 0.7);
+            transition: transform 0.3s ease;
+        }
+
+        .product-details img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #000000;
+            margin: 20px 0;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .spec-list {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #eeb365;
+            box-shadow: 0 0 10px rgb(61, 61, 61);
+            border-radius: 8px;
+        }
+
+        .spec-list h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .spec-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .spec-list ul li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="product-details">
+        <h1>iPhone 16 Pro Max</h1>
+        <img src="assets/16promax.jpg" alt="iPhone 16 Pro Max">
+        <h2>Overview</h2>
+        <p>The iPhone 16 Pro Max Launch with Ai (Apple Intelligence), brings an array of cutting-edge technologies and design elements. With its sleek and premium build, powerful internals, and advanced camera systems, it's the ultimate choice for tech enthusiasts. Available in stunning colors like Desert Titanium, Midnight, Starlight, Sierra Blue, and Gold, the iPhone 16 Pro Max is as beautiful as it is powerful.</p>
+
+        <div class="spec-list">
+            <h3>Key Specifications</h3>
+            <ul>
+                <li><strong>Display:</strong> 6.9 inches
+                    2868 x 1320 pixels
+                    Variable 1-120Hz Refresh rate
+                    </li>
+                <li><strong>Resolution:</strong> 3200 x 1440 pixels</li>
+                <li><strong>Processor:</strong> A18 Bionic Chip with 6-core CPU, 6-core GPU</li>
+                <li><strong>Storage:</strong> 256GB, 512GB, 1TB options</li>
+                <li><strong>Camera:</strong> 48 MP (Triple camera) 12 MP front</li>
+                <li><strong>Front Camera:</strong> 12 MP, f/1.9, 23mm (wide), 1/3.6", PDAF, OIS SL 3D, (depth/biometrics sensor)</li>
+                <li><strong>Battery:</strong> Battery 4685 mAh</li>
+                <li><strong>Operating System:</strong> iOS 18</li>
+                <li><strong>Colors:</strong> Desert Titanium, Midnight, Starlight, Sierra Blue, Gold</li>
+                <li><strong>Hardware:</strong> A18 Pro 8GB RAM</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Prepack Traders. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
