@@ -136,12 +136,15 @@
             box-shadow: 0 4px 10px rgb(255, 254, 254);
         }
 
+        /* Product styling */
         .product img {
             width: 100%;
-            height: 245px;
+            aspect-ratio: 1/1; /* Makes the image a square */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
             display: block;
             border: none;
         }
+
 
         /* Overlay styling */
         .overlay {
@@ -288,6 +291,7 @@
             const products = [
                 { name: 'Airpods Pro', img: 'assets/airpodspro.jpg', price: 'Rs. 2500', specs: 'Noise Cancelling, Wireless Charging, Custom Fit', page: 'airpodspro.html' },
                 { name: 'Smart Watch Classic', img: 'assets/smartwatch.jpg', price: 'Rs. 7000', specs: 'Heart Rate Monitoring, GPS Tracking, Long Battery Life', page: 'js6watch.html' },
+                { name: 'iphone Charger', img: 'assets/charger.jpg', price: 'Rs. 2000', specs: 'Fast Charger for iphone', page: 'charger.html' },
                 { name: 'Airpods Pro 2', img: 'assets/Airpods pro2.jpg', price: 'Rs. 3000', specs: 'Enhanced Noise Cancellation, Improved Battery Life', page: 'airpodspro2.html' },
                 { name: 'Iphone X-64Gb', img: 'assets/iphone xs.jpg', price: 'Rs. 35,000', specs: '64GB Storage, Dual Camera System', page: 'iphonexs.html' },
                 { name: 'Smart Watch T900 Ultra', img: 'assets/Smart Watch T900 Ultra.jpg', price: 'Rs. 3000', specs: 'Advanced Fitness Tracking, Multi-Sport Modes', page: 'smartwatcht900ultra.html' },

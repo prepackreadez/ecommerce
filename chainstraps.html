@@ -178,9 +178,8 @@
 
         /* Suggested Products Section */
         .suggested-products {
-            margin-top: 50px;
+            margin-top: 40px;
             text-align: center; /* Center-align text and child elements */
-            size: 40px;
         }
 
         .suggested-products h2 {
@@ -191,61 +190,78 @@
             display: flex;
             justify-content: center; /* Center-align the product items horizontally */
             gap: 20px; /* Space between products */
-            flex-wrap: wrap; /* Allow wrapping of products */
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
 
         .suggested-products .product-item {
-            position: relative; /* Position relative for overlay positioning */
+            position: relative; /* Position relative for overlay effect */
             max-width: 300px;
+            background: rgba(66, 66, 66, 0.9);
             border-radius: 8px;
+            border: 1px solid #ffffff; /* Thin white border by default */
+            box-shadow: 0 4px 10px #290202;
             overflow: hidden;
-            border: 2px solid transparent; /* Border initially transparent */
-            transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Include border color transition */
+            transition: box-shadow 0.3s ease, transform 0.3s ease, border-width 0.3s ease; /* Smooth transitions for glow effect, jump effect, and border width */
+            cursor: pointer; /* Indicate clickable */
+            text-decoration: none; /* Remove underline from links */
         }
 
         .suggested-products .product-item img {
             width: 100%;
-            height: auto;
             display: block;
         }
 
         .suggested-products .product-item .overlay {
-        position: absolute;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.788); /* Dark overlay */
-            color: #ffffff;
-            opacity: 0;
+            background: rgba(0, 0, 0, 0.788);
+            color: #fff;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
             text-align: center;
             padding: 10px;
-            transition: opacity 0.3s ease;
+            box-sizing: border-box;
         }
 
         .suggested-products .product-item:hover .overlay {
-            opacity: 1; /* Show overlay on hover */
+            opacity: 1;
         }
 
-        .suggested-products .product-item .overlay h3 {
-            margin: 0;
+        .suggested-products .product-item .overlay .name {
+            font-size: 2rem; /* Increase the font size for product names */
+            font-weight: bold; /* Make product names bold */
+            margin-bottom: 10px;
+        }
+
+        .suggested-products .product-item .overlay .details {
             font-size: 1rem;
+            display: block; /* Display basic details only */
         }
 
         .suggested-products .product-item .overlay .price {
             font-size: 1.2rem;
-            color: #fcfcfc;
+            color: #ffffff;
+            margin-top: 10px;
         }
+
 
         /* Glow effect and white border on hover */
         .suggested-products .product-item:hover {
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* White glow effect */
-            transform: translateY(-5px); /* Moves the item up slightly on hover */
-            border-color: #ffffff; /* White border on hover */
+            box-shadow: 0 0 15px rgb(255, 255, 255); /* White glow effect */
+            transform: translateY(-10px); /* Moves the item 10px up on hover */
+            border-width: 2px; /* Thicker border on hover */
+        }
+
+        .suggested-products .product-item:active {
+            border-width: 3px; /* Even thicker border on click */
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Enhanced glow effect on click */
         }
 
     </style>
@@ -287,18 +303,26 @@
         </div>
 
         <!-- Suggested Products Section -->
+        <!-- Suggested Products Section -->
         <div class="suggested-products">
-            <h2>Suggestions</h2>
+            <h2>You Might Also Like</h2>
             <div class="product-list">
-            <a href="leatherstraps.html" class="product-item">
-                <div class="product-item">
+                <a href="leatherstraps.html" class="product-item">
                     <img src="assets/leatherstraps.jpg" alt="Leather Straps">
                     <div class="overlay">
-                        <h3>Apple Watch Leather Straps</h3>
-
-                        <p class="price">Rs. 1499</p>
+                        <div class="name">Leather Straps</div>
+                        <div class="details">High Quality Leather & Water Resistant</div>
+                        <div class="price">Rs. 1500.00</div>
                     </div>
-                </div>
+                </a>
+                <a href="ultra2000.html" class="product-item">
+                    <img src="assets/ultrawatch2000.jpg" alt="Smart Watch 2000">
+                    <div class="overlay">
+                        <div class="name">mart Watch Ultra 2000</div>
+                        <div class="details">High-Quality, Comfortable Fit</div>
+                        <div class="price">Rs. 2000.00</div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
