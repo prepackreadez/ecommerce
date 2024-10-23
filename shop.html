@@ -145,6 +145,22 @@
             border: none;
         }
 
+        .stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            font-size: 20px;
+            color: #ffd700;
+            margin-right: 2px;
+        }
+
+        .star.gray {
+            color: #d3d3d3;
+        }
+
 
         /* Overlay styling */
         .overlay {
@@ -289,23 +305,23 @@
         function generateProductBoxes() {
             const container = document.getElementById('product-grid');
             const products = [
-                { name: 'Airpods Pro', img: 'assets/airpodspro.jpg', price: 'Rs. 2500', specs: 'Noise Cancelling, Wireless Charging, Custom Fit', page: 'airpodspro.html' },
-                { name: 'Smart Watch Classic', img: 'assets/smartwatch.jpg', price: 'Rs. 7000', specs: 'Heart Rate Monitoring, GPS Tracking, Long Battery Life', page: 'js6watch.html' },
-                { name: 'iphone Charger', img: 'assets/charger.jpg', price: 'Rs. 2000', specs: 'Fast Charger for iphone', page: 'charger.html' },
-                { name: 'Airpods Pro 2', img: 'assets/Airpods pro2.jpg', price: 'Rs. 3000', specs: 'Enhanced Noise Cancellation, Improved Battery Life', page: 'airpodspro2.html' },
-                { name: 'Iphone X-64Gb', img: 'assets/iphone xs.jpg', price: 'Rs. 35,000', specs: '64GB Storage, Dual Camera System', page: 'iphonexs.html' },
-                { name: 'Smart Watch T900 Ultra', img: 'assets/Smart Watch T900 Ultra.jpg', price: 'Rs. 3000', specs: 'Advanced Fitness Tracking, Multi-Sport Modes', page: 'smartwatcht900ultra.html' },
-                { name: 'Airpods Air31', img: 'assets/airpods.jpg', price: 'Rs. 1500', specs: 'High-Quality Sound, Comfortable Fit', page: 'airpodsair31.html' },
-                { name: 'Airpods 1', img: 'assets/Airpods 1.jpg', price: 'Rs. 1500', specs: 'Original Sound Quality, Seamless Connectivity', page: 'airpods1.html' },
-                { name: 'Airpods 6 Pro', img: 'assets/pro6.jpg', price: 'Rs. 1500', specs: 'Pro Sound Quality, Long Battery Life', page: 'Airpods6pro.html' },
-                { name: 'Apple Watch Strap', img: 'assets/watchstraps.jpg', price: 'Rs. 1500', specs: 'Durable Material, Adjustable Size', page: 'chainstraps.html' },
-                { name: 'Airpods M10', img: 'assets/airpodsm10.jpg', price: 'Rs. 1500', specs: 'High Fidelity Audio, Lightweight Design', page: 'airpodsm10.html' },
-                { name: 'Airpods pro Gen 3rd', img: 'assets/airpodspro3rdgen.jpg', price: 'Rs. 3500', specs: 'Rich Sound Quality, Comfortable Fit', page: 'airpodspro3rdgen.html' },
-                { name: 'Leather Straps', img: 'assets/leatherstraps.jpg', price: 'Rs. 1500', specs: 'Water Proof', page: 'leatherstraps.html' },
-                { name: 'Ultra Watch 2000', img: 'assets/ultrawatch2000.jpg', price: 'Rs. 2000', specs: 'Heart Rate Monitoring, Long Battery Life', page: 'ultra2000.html' },
-                { name: 'Toyota Rims Watch', img: 'assets/toyotarimswatchshoppage.jpg', price: 'Rs. 4000', specs: 'Teal Black With Heavy Chain', page: 'toyotawatch.html' },
-                { name: 'Airpods i12', img: 'assets/Airpods i12.jpg', price: 'Rs. 1500', specs: 'Best Sound with Best Battery Life Also Affordable Price', page: 'airpodsi12.html' },
-                { name: 'Headset Pro', img: 'assets/headset.png', price: 'Rs. 2000', specs: 'Best Sound with Best  Affordable Price', page: 'headset.html' }
+                { name: 'Airpods Pro', img: 'assets/airpodspro.jpg', price: 'Rs. 2500', specs: 'Noise Cancelling, Wireless Charging, Custom Fit', page: 'airpodspro.html' ,rating: 4 },
+                { name: 'Smart Watch Classic', img: 'assets/smartwatch.jpg', price: 'Rs. 7000', specs: 'Heart Rate Monitoring, GPS Tracking, Long Battery Life', page: 'js6watch.html' ,rating: 5},
+                { name: 'iphone Charger', img: 'assets/charger.jpg', price: 'Rs. 2000', specs: 'Fast Charger for iphone', page: 'charger.html' ,rating: 3},
+                { name: 'Airpods Pro 2', img: 'assets/Airpods pro2.jpg', price: 'Rs. 3000', specs: 'Enhanced Noise Cancellation, Improved Battery Life', page: 'airpodspro2.html' ,rating: 4},
+                { name: 'Iphone X-64Gb', img: 'assets/iphone xs.jpg', price: 'Rs. 35,000', specs: '64GB Storage, Dual Camera System', page: 'iphonexs.html' ,rating: 3},
+                { name: 'Smart Watch T900 Ultra', img: 'assets/Smart Watch T900 Ultra.jpg', price: 'Rs. 3000', specs: 'Advanced Fitness Tracking, Multi-Sport Modes', page: 'smartwatcht900ultra.html' ,rating: 5},
+                { name: 'Airpods Air31', img: 'assets/airpods.jpg', price: 'Rs. 1500', specs: 'High-Quality Sound, Comfortable Fit', page: 'airpodsair31.html' ,rating: 2},
+                { name: 'Airpods 1', img: 'assets/Airpods 1.jpg', price: 'Rs. 1500', specs: 'Original Sound Quality, Seamless Connectivity', page: 'airpods1.html' ,rating: 1},
+                { name: 'Airpods 6 Pro', img: 'assets/pro6.jpg', price: 'Rs. 1500', specs: 'Pro Sound Quality, Long Battery Life', page: 'Airpods6pro.html',rating: 3 },
+                { name: 'Apple Watch Strap', img: 'assets/watchstraps.jpg', price: 'Rs. 1500', specs: 'Durable Material, Adjustable Size', page: 'chainstraps.html' ,rating: 3},
+                { name: 'Airpods M10', img: 'assets/airpodsm10.jpg', price: 'Rs. 1500', specs: 'High Fidelity Audio, Lightweight Design', page: 'airpodsm10.html' ,rating: 4},
+                { name: 'Airpods pro Gen 3rd', img: 'assets/airpodspro3rdgen.jpg', price: 'Rs. 3500', specs: 'Rich Sound Quality, Comfortable Fit', page: 'airpodspro3rdgen.html' ,rating: 5},
+                { name: 'Leather Straps', img: 'assets/leatherstraps.jpg', price: 'Rs. 1500', specs: 'Water Proof', page: 'leatherstraps.html' ,rating: 2},
+                { name: 'Ultra Watch 2000', img: 'assets/ultrawatch2000.jpg', price: 'Rs. 2000', specs: 'Heart Rate Monitoring, Long Battery Life', page: 'ultra2000.html' ,rating: 5},
+                { name: 'Toyota Rims Watch', img: 'assets/toyotarimswatchshoppage.jpg', price: 'Rs. 4000', specs: 'Teal Black With Heavy Chain', page: 'toyotawatch.html' ,rating: 5},
+                { name: 'Airpods i12', img: 'assets/Airpods i12.jpg', price: 'Rs. 1500', specs: 'Best Sound with Best Battery Life Also Affordable Price', page: 'airpodsi12.html' ,rating: 4},
+                { name: 'Headset Pro', img: 'assets/headset.png', price: 'Rs. 2000', specs: 'Best Sound with Best  Affordable Price', page: 'headset.html',rating: 1 }
             ];
 
             products.forEach(product => {
@@ -315,8 +331,11 @@
                 productDiv.dataset.name = product.name.toLowerCase();
                 productDiv.innerHTML = `
                     <img src="${product.img}" alt="${product.name}">
-                    <div class="overlay"> 
+                    <div class="overlay">
                         <h4>${product.name}</h4>
+                        <div class="stars">
+                            ${generateStars(product.rating)}
+                        </div>
                         <p>${product.specs}</p>
                         <p>${product.price}</p>
                     </div>
@@ -324,6 +343,15 @@
                 container.appendChild(productDiv);
             });
         }
+
+        function generateStars(rating) {
+            let starsHTML = '';
+            for (let i = 1; i <= 5; i++) {
+                starsHTML += `<span class="star ${i <= rating ? '' : 'gray'}">&#9733;</span>`;
+            }
+            return starsHTML;
+        }
+
 
         function filterProducts() {
             const searchInput = document.getElementById('search-input');
