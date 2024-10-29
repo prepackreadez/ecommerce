@@ -255,6 +255,34 @@
             box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8); /* White glowing border effect */
             transform: translateY(-10px); /* Moves the item 10px up on hover */
         }
+        .customer-reviews {
+            margin-top: 20px;
+        }
+
+        .stars {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .star.yellow {
+            color: #FFD700; /* Gold color for yellow stars */
+        }
+
+        .star.grey {
+            color: #D3D3D3; /* Light gray color for the grey star */
+        }
+
+
+
+        @media (max-width: 768px) {
+        .product-details {
+            flex-direction: column;
+        }
+
+        .product-images, .product-info {
+            max-width: 100%;
+        }
+}
     </style>
 </head>
 <body>

@@ -257,6 +257,34 @@
             border-width: 3px; /* Even thicker border on click */
             box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Enhanced glow effect on click */
         }
+        .customer-reviews {
+            margin-top: 20px;
+        }
+
+        .stars {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .star.yellow {
+            color: #FFD700; /* Gold color for yellow stars */
+        }
+
+        .star.grey {
+            color: #D3D3D3; /* Light gray color for the grey star */
+        }
+
+
+
+        @media (max-width: 768px) {
+        .product-details {
+            flex-direction: column;
+        }
+
+        .product-images, .product-info {
+            max-width: 100%;
+        }
+}
     </style>
 </head>
 <body>
@@ -288,6 +316,18 @@
                     <p><strong>Watt:</strong> 25</p>
                     <p><strong>Compatibility:</strong> every mobile</p>
                 </ul>
+            </div>
+            <div class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <div class="stars">
+                    <span class="star yellow">★</span>
+                    <span class="star yellow">★</span>
+                    <span class="star yellow">★</span>
+                    <span class="star grey">★</span>
+                    <span class="star grey">★</span>
+                </div>
+                <p>3 out of 5 stars</p>
+                <p>Based on 53 reviews</p>
             </div>
             <div class="call-to-action">
                 <a target="_blank" class="buy-now" onclick="window.location.href='https://wa.me/+923249451728?text=I%27m%20interested%20in%20the%20AirPods%20i12%20send%20me%20more%20details...'">WhatsApp</a>
