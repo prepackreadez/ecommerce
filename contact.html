@@ -73,40 +73,67 @@
 
         /* Contact section styling */
         .contact-container {
+            text-align: center;
             padding: 20px;
-            background: rgba(51, 51, 51, 0.8); /* Dark background with slight transparency */
-            border: 1px solid #444; /* Slightly lighter border */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            display: inline-block; /* Center container */
-            width: 300px;
+            background: radial-gradient(circle, #3f3f3e, rgb(27, 27, 26));
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
         }
 
         .contact-container h2 {
-            margin-top: 0;
-            color: #ffffff; /* Light text color for headings */
+            font-size: 24px;
+            color: #a3a0a0;
+            margin-bottom: 10px;
+            margin-bottom: 25px;
         }
 
         .contact-container p {
-            margin: 10px 0; /* Add some margin to paragraphs */
+            font-size: 16px;
+            color: #a3a0a0;
+            margin: 5px 0;
+            margin-bottom: 25px;
         }
 
-        .contact-container a {
-            text-decoration: none; /* Remove underline from links */
-        }
-
-        /* Specific styles for contact links */
-        .contact-container a.phone {
-            color: #808080; /* Gray color for phone links */
-        }
-
+        .contact-container a.phone,
         .contact-container a.email {
-            color: #808080; /* White color for email links */
+            color: #ceccc9;
+            text-decoration: none;
+            margin-bottom: 25px;
         }
 
         .contact-container a.phone:hover,
         .contact-container a.email:hover {
-            text-decoration: underline; /* Underline on hover for better visibility */
+            text-decoration: underline;
+            margin-bottom: 25px;
+        }
+
+        .contact-container .social-link {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 10px;
+            color: #ceccc9;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+            margin-bottom: 25px;
+        }
+
+        .contact-container .social-link img {
+            margin-right: 8px;
+            vertical-align: middle;
+            border-radius: 20px;
+        }
+
+        .contact-container .social-link:hover {
+            color: #2a2b2c;
+
+        }
+
+        .contact-container .social-link img {
+            width: 24px;
+            height: 24px;
+
         }
 
         footer {
@@ -136,13 +163,23 @@
         <section class="contact-container">
             <h2>Contact Us</h2>
             <p>Phone: <a href="tel:+923249451728" class="phone">+92 (0324) 9451728</a></p>
-            <p>Email: <a href="mailto:prepacktradez@gmail.com" class="email">prepacktradez@gmail.com</a></p>
+            <p>Email: <a href="mailto:chaudharytechs37@gmail.com" class="email">chaudharytechs37@gmail.com</a></p>
+            <p>Follow us on:</p>
+            <p>
+                <a href="https://www.instagram.com/chaudhary_techs/"_blank" class="social-link">
+                    <img src="assets/instagramlogo.jpg" alt="Instagram" style="width: 24px; height: 24px;"> Instagram
+                </a>
+                <a href="https://www.tiktok.com/@chaudhary_techs" target="_blank" class="social-link">
+                    <img src="assets/tiktoklogo.jpg" alt="TikTok" style="width: 24px; height: 24px;"> TikTok
+                </a>
+            </p>
         </section>
+        
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Prepack Traders. All rights reserved.</p>
+        <p>&copy; 2024 Chaudhary Techs. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript for dynamic active link -->
