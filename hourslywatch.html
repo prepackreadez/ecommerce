@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - JS6 Classic Smart Watch</title>
+    <title>Product Details - Hoursly Watch</title>
     <style>
         /* Global styles */
         body {
@@ -15,6 +15,8 @@
             position: relative; /* Ensure body is positioned for absolute children */
             background-color: black; /* Fallback background color */
         }
+
+
 
         /* Header styling */
         header {
@@ -52,6 +54,9 @@
             color: #ffffff;
         }
 
+        header nav ul li a.active {
+            border-bottom: 2px solid #ffffff;
+        }
 
         .container {
             max-width: 1200px;
@@ -168,7 +173,6 @@
             display: flex;
             justify-content: center; /* Center-align the product items horizontally */
             gap: 20px; /* Space between products */
-            flex-wrap: wrap;
         }
 
         .suggested-products .product-item {
@@ -266,10 +270,10 @@
             max-width: 100%;
         }
 }
+        
     </style>
 </head>
 <body>
-
 
     <header>
         <nav>
@@ -286,19 +290,19 @@
     <div class="container">
         <div class="product-details">
             <div class="product-images">
-                <img src="assets/Smart Watch T900 Ultra.jpg" alt="Smart Watch T900 Ultra">
+                <img src="assets/hoursly watch.jpg" alt="Hoursly Watch">
             </div>
             <div class="product-info">
-                <h1>Ultra Smart Watch T900</h1>
-                <p class="price">Rs. 2500.00</p>
-                <p>The T900 Classic Smart Watch combines timeless design with modern functionality. It is equipped with heart rate monitoring, GPS tracking, and a long battery life, making it an excellent choice for both fitness enthusiasts and tech lovers.</p>
+                <h1>Hoursly Watch</h1>
+                <p class="price">Rs. 4000.00</p>
+                <p>It is the Original watch with leather boxs - It has the Bazel which has very Good Quality for rotating.</p>
 
                 <div class="specs">
                     <h4>Specifications</h4>
-                    <p><strong>Battery Life:</strong> 2 days</p>
+                    <p><strong>Colour:</strong> Silver + Black, Silver + Silver, Golden + Black, Golden + Golden</p>
                     <p><strong>Water Resistance:</strong> 5 ATM</p>
-                    <p><strong>GPS:</strong> Yes</p>
-                    <p><strong>Heart Rate Monitor:</strong> Yes</p>
+                    <p><strong>Material:</strong> Mat Coating on Stainless Steel</p>
+                    <p><strong>Assets:</strong>Leather Box</p>
                 </ul>
             </div>
             <div class="customer-reviews">
@@ -311,10 +315,10 @@
                     <span class="star yellow">★</span>
                 </div>
                 <p>5 out of 5 stars</p>
-                <p>Based on 543 reviews</p>
+                <p>Based on 13 reviews</p>
             </div>
             <div class="call-to-action">
-                <a target="_blank" class="buy-now" onclick="window.location.href='https://wa.me/+923249451728?text=I%27m%20interested%20in%20the%20Smartwatch%20T900%20send%20me%20more%20details...'">WhatsApp</a>
+                <a target="_blank" class="buy-now" onclick="window.location.href='https://wa.me/+923249451728?text=I%27m%20interested%20in%20the%20hoursly%20Watch%20send%20me%20more%20details...'">WhatsApp</a>
             </div>
             
         </div>
@@ -348,12 +352,12 @@
                 {
                     name: 'T900 Ultra Latest Version',
                     image: 'assets/T900 Ultra.jpg',
-                    link: '#',
+                    link: 'smartwatcht900ultra.html',
                     details: 'Latest Features, Superior Performance',
-                    price: 'Rs. 3000.00'
+                    price: 'Rs. 3499.00'
                 },
                 {
-                    name: 'Straps For Smart Watch',
+                    name: 'JS6 Mini Smart Watch',
                     image: 'assets/Watchstraps.jpg',
                     link: 'chainstraps.html', /* Link to chainstraps.html */
                     details: 'Chain straps Water-Proof',
