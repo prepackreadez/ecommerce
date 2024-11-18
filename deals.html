@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="description" content="Explore our wide range of products with a special 2500 Prices">
     <meta name="robots" content="index, follow">
     <title>Deals - Buy and Get free Gift</title>
@@ -192,13 +193,25 @@
             border-radius: 3px;
         }
 
-        /* Footer styling */
-        footer {
+                footer {
             text-align: center;
             padding: 15px;
             background-color: #000;
             color: #ffffff;
         }
+
+        footer a {
+            color: #ffffff;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #ff6347;
+        }
+
 
         /* Media Queries */
         @media (max-width: 768px) {
@@ -236,7 +249,13 @@
 
     <footer>
         <p>&copy; 2024 Chaudhary Techs. All rights reserved.</p>
+        <div>
+            <a href="https://wa.me/+923124110635">WhatsApp</a>
+            <a href="https://tiktok.com/@chaudhary_techs">TikTok</a>
+            <a href="https://www.instagram.com/chaudhary_techs/">Instagram</a>
+        </div>
     </footer>
+    
 
     <script>
         function generateProductBoxes() {

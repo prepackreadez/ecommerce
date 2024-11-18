@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Chaudhary Techs</title>
     <style>
         /* Global styles */
@@ -308,14 +309,25 @@
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
         }
 
-        /* Footer styling */
         footer {
-            background-color: #000000;
-            color: #ffffff;
             text-align: center;
-            padding: 20px;
-            margin-top: auto;
+            padding: 15px;
+            background-color: #000;
+            color: #ffffff;
         }
+
+        footer a {
+            color: #ffffff;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #ff6347;
+        }
+
 
         /* Updated Customer Reviews styles */
         .customer-reviews {
@@ -608,9 +620,13 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Chaudhary Techs. All rights reserved.</p>
+        <div>
+            <a href="https://wa.me/+923124110635">WhatsApp</a>
+            <a href="https://tiktok.com/@chaudhary_techs">TikTok</a>
+            <a href="https://www.instagram.com/chaudhary_techs/">Instagram</a>
+        </div>
     </footer>
 
     <!-- JavaScript -->

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Product Details - JS6 Classic Smart Watch</title>
     <style>
         /* Global styles */
@@ -146,12 +147,23 @@
             transform: scale(0.9); /* Slightly larger when hovered */
             box-shadow: 0 0 20px rgb(56, 56, 56), 0 0 30px rgba(0, 0, 0, 0.5); /* Glow effect */
         }
-
         footer {
             text-align: center;
             padding: 15px;
-            background-color: #333;
-            color: #fff;
+            background-color: #000;
+            color: #ffffff;
+        }
+
+        footer a {
+            color: #ffffff;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #ff6347;
         }
 
         /* Suggested Products Section */
@@ -331,7 +343,12 @@
 
     <!-- Footer -->
     <footer>
-        &copy; 2024 Chaudhary Techs. All rights reserved.
+        <p>&copy; 2024 Chaudhary Techs. All rights reserved.</p>
+        <div>
+            <a href="https://wa.me/+923124110635">WhatsApp</a>
+            <a href="https://tiktok.com/@chaudhary_techs">TikTok</a>
+            <a href="https://www.instagram.com/chaudhary_techs/">Instagram</a>
+        </div>
     </footer>
 
     <!-- JavaScript for dynamic content and interactions -->

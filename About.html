@@ -82,13 +82,25 @@
             margin-top: 0;
             color: #f0f0f0; /* Light text color for headings */
         }
-
         footer {
             text-align: center;
-            padding: 10px;
-            background-color: #1a1a1a;
-            color: #ffffff; /* Red color for footer text */
+            padding: 15px;
+            background-color: #000;
+            color: #ffffff;
         }
+
+        footer a {
+            color: #ffffff;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #ff6347;
+        }
+
     </style>
 </head>
 <body>
@@ -113,9 +125,13 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Chaudhary Techs. All rights reserved.</p>
+        <div>
+            <a href="https://wa.me/+923124110635">WhatsApp</a>
+            <a href="https://tiktok.com/@chaudhary_techs">TikTok</a>
+            <a href="https://www.instagram.com/chaudhary_techs/">Instagram</a>
+        </div>
     </footer>
 
     <!-- JavaScript for dynamic active link -->
