@@ -276,11 +276,22 @@ nav ul li a:focus {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Glowing effect on hover */
 }
 
-
-/* Footer styling */
 footer {
     text-align: center;
     padding: 15px;
     background-color: #000;
     color: #ffffff;
 }
+
+footer a {
+    color: #ffffff;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ff6347;
+}
+
