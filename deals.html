@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="description" content="Explore our wide range of products with a special 2500 Prices">
     <meta name="robots" content="index, follow">
-    <title>Deals - Buy and Get free Gift</title>
+    <title>Deals - 20% off</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Global styles */
@@ -261,7 +261,7 @@
         function generateProductBoxes() {
             const container = document.getElementById('product-grid');
             const products = [
-                { name: 'Airpods Pro', img: 'assets/airpodspro.jpg', price: 'Rs. 2500', specs: 'Noise Cancelling, Wireless Charging', page: 'airpodspro.html' },
+                { name: 'Airpods & Smart Watch', img: 'assets/dealairwatch.jpg', price: 'Rs. 5000.00', specs: 'Best Deal for boys, high quality products', page: 'dealairwatch.html' },
                 { name: 'Smart Watch T900 ultra', img: 'assets/T900 Ultra.jpg', price: 'Rs. 2500', specs: 'Heart Rate Monitoring, Sports Functions', page: 't900watchdeal.html' },
                 // Add more products as needed
             ];
@@ -272,7 +272,7 @@
                 productDiv.className = 'product';
                 productDiv.dataset.name = product.name.toLowerCase();
                 productDiv.innerHTML = `
-                    <span class="deal-banner">Everything Just in 2500</span>
+                    <span class="deal-banner">Grand Sale 20% off.</span>
                     <img src="${product.img}" alt="${product.name}">
                     <div class="overlay">
                         <h4>${product.name}</h4>
