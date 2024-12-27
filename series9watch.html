@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Product Details - Rolex Watch</title>
+    <title>Product Details - series 9 Smart Watch</title>
     <style>
         /* Global styles */
         body {
@@ -187,6 +187,7 @@
             display: flex;
             justify-content: center; /* Center-align the product items horizontally */
             gap: 20px; /* Space between products */
+            flex-wrap: wrap;
         }
 
         .suggested-products .product-item {
@@ -284,10 +285,10 @@
             max-width: 100%;
         }
 }
-        
     </style>
 </head>
 <body>
+
 
     <header>
         <nav>
@@ -304,19 +305,18 @@
     <div class="container">
         <div class="product-details">
             <div class="product-images">
-                <img src="assets/rollexsilver.jpg" alt="Rolex Watch">
+                <img src="assets/series9watch.jpg" alt="Smart watch series9">
             </div>
             <div class="product-info">
-                <h1>Rolex Watch</h1>
-                <p class="price">Rs. 4000.00</p>
-                <p>It is the Best Classic watch, stainless steel - It's a compatible with every dressing.</p>
-
+                <h1>Smart Watch series 9</h1>
+                <p class="price">Rs. 2500.00</p>
+                <p>The series 9 Smart Watch combines timeless design with modern functionality. It is equipped with heart rate monitoring, GPS tracking, and a long battery life, making it an excellent choice for both fitness enthusiasts and tech lovers.</p>
                 <div class="specs">
                     <h4>Specifications</h4>
-                    <p><strong>Colour:</strong> Silver</p>
-                    <p><strong>Water Resistance:</strong> 5 ATM</p>
-                    <p><strong>Material:</strong> Mat Coating on Stainless Steel</p>
-                    <p><strong>Quality:</strong> A class</p>
+                    <p><strong>Battery Life:</strong> 2 days</p>
+                    <p><strong>Water Resistance:</strong> No</p>
+                    <p><strong>Sports Functions:</strong> Yes</p>
+                    <p><strong>Heart Rate Monitor:</strong> Yes</p>
                 </ul>
             </div>
             <div class="customer-reviews">
@@ -326,13 +326,13 @@
                     <span class="star yellow">★</span>
                     <span class="star yellow">★</span>
                     <span class="star yellow">★</span>
-                    <span class="star yellow">★</span>
+                    <span class="star grey">★</span>
                 </div>
-                <p>5 out of 5 stars</p>
-                <p>Based on 13 reviews</p>
+                <p>5 out of 4 stars</p>
+                <p>Based on 130 reviews</p>
             </div>
             <div class="call-to-action">
-                <a target="_blank" class="buy-now" onclick="window.location.href='https://wa.me/+923392494517?text=I%27m%20interested%20in%20the%20hoursly%20Watch%20send%20me%20more%20details...'">WhatsApp</a>
+                <a target="_blank" class="buy-now" onclick="window.location.href='https://wa.me/+923392494517?text=I%27m%20interested%20in%20the%20Ultra%20watch%202000%20send%20me%20more%20details...'">WhatsApp</a>
             </div>
             
         </div>
@@ -347,7 +347,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Chaudhary Techs. All rights reserved.</p>
         <div>
@@ -362,25 +361,25 @@
         document.addEventListener('DOMContentLoaded', () => {
             const suggestedProducts = [
                 {
-                    name: 'Hoursly Watch',
-                    image: 'assets/hoursly watch.jpg',
-                    link: 'hourslywatch.html',
-                    details: 'It is the Original watch with leather boxs',
-                    price: 'Rs. 4000.00'
+                    name: 'Smart Watch T900 Ultra',
+                    image: 'assets/Smart Watch T900 Ultra.jpg',
+                    link: '#',
+                    details: '7 days battery life, Water-resistant up to 5 ATM',
+                    price: 'Rs. 2999.00'
                 },
                 {
-                    name: 'Toyota Rims Watch',
-                    image: 'assets/toyotarimswatchshoppage.jpg',
-                    link: 'toyotawatch.html',
-                    details: 'This watch designes as a Toyota Rims',
-                    price: 'Rs. 4000.00'
+                    name: 'T900 Ultra Latest Version',
+                    image: 'assets/T900 Ultra.jpg',
+                    link: 'smartwatcht900ultra.html',
+                    details: 'Latest Features, Superior Performance',
+                    price: 'Rs. 3499.00'
                 },
                 {
-                    name: 'Rolex Watch',
-                    image: 'assets/rolexgolden.jpg',
-                    link: 'rolexgold.html', /* Link to chainstraps.html */
-                    details: 'Clasic Watch Compatible with every dressings',
-                    price: 'Rs. 4500.00'
+                    name: 'JS6 Mini Smart Watch',
+                    image: 'assets/Watchstraps.jpg',
+                    link: 'chainstraps.html', /* Link to chainstraps.html */
+                    details: 'Chain straps Water-Proof',
+                    price: 'Rs. 1499.00'
                 }
             ];
 
