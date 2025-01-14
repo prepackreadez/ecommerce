@@ -261,8 +261,8 @@
         function generateProductBoxes() {
             const container = document.getElementById('product-grid');
             const products = [
-                { name: 'Airpods & Smart Watch', img: 'assets/dealairwatch.jpg', price: 'Rs. 5000.00', specs: 'Best Deal for boys, high quality products', page: 'dealairwatch.html' },
-                { name: 'Smart Watch T900 ultra', img: 'assets/T900 Ultra.jpg', price: 'Rs. 2500', specs: 'Heart Rate Monitoring, Sports Functions', page: 't900watchdeal.html' },
+                { name: 'Airpods & Smart Watch', img: 'assets/dealairwatch.jpg', price: 'Rs. 4500.00', specs: 'Best Deal for boys, high quality products', page: 'deal1.html' },
+                { name: 'Ultra Watches', img: 'assets/T900 Ultra.jpg', price: 'Rs. 3500', specs: 'Good Deal for Twining with Brother from another Mother', page: 'deal2.html' },
                 // Add more products as needed
             ];
 
@@ -272,7 +272,7 @@
                 productDiv.className = 'product';
                 productDiv.dataset.name = product.name.toLowerCase();
                 productDiv.innerHTML = `
-                    <span class="deal-banner">20% off</span>
+                    <span class="deal-banner">Grand Sale</span>
                     <img src="${product.img}" alt="${product.name}">
                     <div class="overlay">
                         <h4>${product.name}</h4>
