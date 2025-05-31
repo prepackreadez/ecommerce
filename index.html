@@ -109,7 +109,7 @@
             font-size: 4rem;
             margin: 0;
             font-weight: 700;
-            animation: fadeIn 7s ease-out;
+            animation: fadeIn 5s ease-out;
             margin-right: 2rem;
         }
 
@@ -117,7 +117,7 @@
             font-size: 1.5rem;
             margin: 10px 0 30px;
             font-weight: 300;
-            animation: fadeIn 7s ease-out;
+            animation: fadeIn 5s ease-out;
             margin-right: 1.8rem;
         }
 
@@ -130,7 +130,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeIn 7s ease-out;
+            animation: fadeIn 5s ease-out;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
             margin-right: 2rem;
         }
@@ -313,7 +313,7 @@
         footer {
             text-align: center;
             padding: 15px;
-            background-color: #000;
+            background-color: #290202;
             color: #ffffff;
         }
 
@@ -455,6 +455,15 @@
             background-color: #290202;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
         }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.664); /* Adjust darkness here */
+            z-index: 0;
+        }
 
 
         /* Responsive styling */
@@ -479,35 +488,34 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Deals</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="banner-img">
-                <video autoplay muted loop playsinline>
-                    <source src="./assets/background.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+<section class="hero">
+    <div class="banner-img">
+        <video autoplay muted loop playsinline>
+            <source src="./assets/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
-            <div class="hero-content">
-                <h1>Fragrances by EMUM</h1>
-                <p>Inhale confidence, exhale elegance</p>
-                <button id="hero-content-button">Shop Here</button>
-                <script>
-                    document.getElementById("hero-content-button").addEventListener("click", function() {
-                        window.location.href = "shop.html";
-                    });
-                </script>
-            </div>
-        </section>
+    <!-- 🔽 Add this overlay -->
+    <div class="video-overlay"></div>
+
+    <div class="hero-content">
+        <h1>Fragrances by EMUM</h1>
+        <p>Inhale confidence, exhale elegance</p>
+        <button id="hero-content-button">Shop Here</button>
+    </div>
+</section>
+
 
         <!-- Featured Products Section -->
         <section class="featured-products" style="background-color: black;">
@@ -644,5 +652,10 @@
             window.location.href = 'shop.html'; // Replace with the actual URL of your flash sale page
         });
     </script>
+                    <script>
+                    document.getElementById("hero-content-button").addEventListener("click", function() {
+                        window.location.href = "shop.html";
+                    });
+                </script>
 </body>
 </html>
