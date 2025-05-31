@@ -7,7 +7,6 @@
     <meta name="description" content="Explore our wide range of products with a special 2500 Prices">
     <meta name="robots" content="index, follow">
     <title>Deals - 20% off</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         /* Global styles */
         html, body {
@@ -23,7 +22,7 @@
             min-height: 100vh;
             font-family: Arial, sans-serif;
             color: #ffffff;
-            background: linear-gradient(to bottom, #000000 50%, #333333 50%);
+            background: linear-gradient(to bottom, #000000 50%, #490101 50%);
         }
 
         main {
@@ -32,7 +31,7 @@
 
         /* Header styling */
         header {
-            background-color: #333333;
+            background-color: #290202;
             padding: 10px 20px;
             display: flex;
             flex-direction: column;
@@ -61,7 +60,7 @@
 
         nav ul li a:hover,
         nav ul li a:focus {
-            background-color: #555555;
+            background-color: #490101;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
             color: #ffffff;
         }
@@ -78,11 +77,11 @@
 
         .search-bar input[type="text"] {
             padding: 8px 12px;
-            border: 2px solid #555555;
+            border: 1px solid #470202;
             border-radius: 5px;
             font-size: 14px;
             width: 66%;
-            background-color: #444444;
+            background-color: #290202;
             color: #ffffff;
             box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
             transition: box-shadow 0.3s ease;
@@ -101,7 +100,7 @@
         /* Featured Products section styling */
         .featured-products {
             padding: 20px;
-            background-color: #222222;
+            background-color: #490101;
         }
 
         .featured-products h2 {
@@ -119,29 +118,33 @@
             margin-top: 20px;
         }
 
-        .product {
-            position: relative;
-            background: #414141;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-            overflow: hidden;
-            width: 250px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+.product {
+    position: relative;
+    background: #414141;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    width: 400px; /* Increased from 250px */
+    height: 400px; /* Optional: add a fixed height */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
         .product:hover {
             transform: translateY(-5px);
             box-shadow: 0 4px 10px rgb(255, 254, 254);
         }
 
-        .product img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border: none;
-        }
+
+.product img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border: none;
+}
+
 
         /* Overlay styling */
         .overlay {
@@ -196,7 +199,7 @@
                 footer {
             text-align: center;
             padding: 15px;
-            background-color: #000;
+            background-color: #290202;
             color: #ffffff;
         }
 
@@ -214,11 +217,73 @@
 
 
         /* Media Queries */
-        @media (max-width: 768px) {
-            .product {
-                max-width: 150px;
+ @media (max-width: 768px) {
+            nav ul {
+                align-items: center; /* Center items */
+            }
+
+            nav ul li {
+                margin: 5px 0; /* Add vertical spacing */
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem; /* Reduce font size */
+            }
+
+            .hero-content p {
+                font-size: 1.2rem; /* Reduce font size */
+            }
+
+            .hero-content button {
+                font-size: 14px; /* Reduce button font size */
+                padding: 8px 16px; /* Adjust padding */
+            }
+
+            .featured-products h2 {
+                font-size: 2rem; /* Reduce heading size */
+            }
+
+            .product-grid {
+                display: flex; /* Change from grid to flex for mobile */
+                flex-wrap: nowrap; /* Allow items to wrap onto the next line */
+                flex-direction: column;
+                align-items: center;
+                justify-content: center; /* Center items */
+                gap: 20px; /* Maintain space between items */
+            }
+
+
+    .product {
+        max-width: 200px; /* Increased for better mobile display */
+        flex: 1 0 200px;
+    }
+
+
+
+            .product h3 {
+                font-size: 1.2rem; /* Reduce product title size */
+            }
+
+            .product p {
+                font-size: 1rem; /* Reduce product description size */
+            }
+
+            .call-to-action h2 {
+                font-size: 1.8rem; /* Reduce heading size */
+            }
+
+            .call-to-action p {
+                font-size: 1rem; /* Reduce paragraph size */
+            }
+
+            .call-to-action button {
+                font-size: 14px; /* Reduce button font size */
+                padding: 8px 16px; /* Adjust padding */
             }
         }
+
+
+
     </style>
 </head>
 <body>
@@ -248,11 +313,11 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Chaudhary Techs. All rights reserved.</p>
+        <p>&copy; 2025 Emum Perfumes. Inhale confidence, exhale elegance.</p>
         <div>
-            <a href="https://wa.me/+923124110635">WhatsApp</a>
-            <a href="https://tiktok.com/@chaudhary_techs">TikTok</a>
-            <a href="https://www.instagram.com/chaudhary_techs/">Instagram</a>
+            <a href="https://wa.me/+923291607601">WhatsApp</a>
+            <a href="https://www.tiktok.com/@emum01?_t=ZS-8wmdfnbcC0Y&_r=1">TikTok</a>
+            <a href="https://www.instagram.com/emumperfumes?igsh=MWJ3N2c0ZXprZGF4eg==">Instagram</a>
         </div>
     </footer>
     
@@ -261,8 +326,7 @@
         function generateProductBoxes() {
             const container = document.getElementById('product-grid');
             const products = [
-                { name: 'Airpods & Smart Watch', img: 'assets/dealairwatch.jpg', price: 'Rs. 4500.00', specs: 'Best Deal for boys, high quality products', page: 'deal1.html' },
-                { name: 'Ultra Watches', img: 'assets/T900 Ultra.jpg', price: 'Rs. 3500', specs: 'Good Deal for Twining with Brother from another Mother', page: 'deal2.html' },
+                { name: 'Elegance & Delicacy', img: 'assets/eleganceanddelicacy.png', price: 'Rs. 4800.00', specs: 'Best Deal for couple, long lasting fragrances', page: 'deal1.html' },
                 // Add more products as needed
             ];
 

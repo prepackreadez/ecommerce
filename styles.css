@@ -133,46 +133,6 @@ nav ul li a:focus {
     }
 }
 
-/* Featured Products section styling */
-.featured-products {
-    position: relative;
-    padding: 40px 20px;
-    color: #ffffff;
-    overflow: hidden; /* Ensures the video does not spill outside */
-}
-
-.featured-products .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Ensures the video is behind the content */
-}
-
-.featured-products .video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire container */
-    filter: brightness(0.5); /* Optional: darken the video for better text readability */
-}
-
-.featured-products .content {
-    position: relative;
-    z-index: 1; /* Ensures content is above the video */
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.5); /* Optional: additional background color for better readability */
-}
-
-.featured-products h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
